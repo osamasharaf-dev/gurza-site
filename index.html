@@ -3,9 +3,28 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>غُرزة</title>
+<title>غُرزة | دار أزياء راقية في الرياض</title>
 <meta name="description" content="غُرزة دار أزياء راقية في الرياض. فساتين سهرة وزفاف تُفصَّل على مقاسك وتُخاط يدوياً في مشغلنا بحي الياسمين.">
 <meta name="theme-color" content="#0D1B4C">
+<link rel="canonical" href="https://ghurza.vercel.app/">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="غُرزة">
+<meta property="og:locale" content="ar_SA">
+<meta property="og:url" content="https://ghurza.vercel.app/">
+<meta property="og:title" content="غُرزة | دار أزياء راقية في الرياض">
+<meta property="og:description" content="قبل أن تتكلمي… فستانك قال كل شيء. فساتين سهرة وزفاف تُفصَّل على مقاسك وتُخاط يدوياً في الرياض.">
+<meta property="og:image" content="https://ghurza.vercel.app/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="غُرزة — فستان أحمر وشعار الدار">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="غُرزة | دار أزياء راقية في الرياض">
+<meta name="twitter:description" content="قبل أن تتكلمي… فستانك قال كل شيء. فساتين سهرة وزفاف تُفصَّل على المقاس في الرياض.">
+<meta name="twitter:image" content="https://ghurza.vercel.app/og-image.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600&display=swap">
 <style>
@@ -19,7 +38,8 @@
   color-scheme:light;
 }
 *{box-sizing:border-box}
-body{background:var(--bg);color:var(--fg);font-family:var(--body);font-size:16px;line-height:1.8;direction:rtl;overflow-x:clip}
+html{overflow-x:clip}
+body{background:var(--bg);color:var(--fg);font-family:var(--body);font-size:16px;line-height:1.8;direction:rtl;overflow-x:clip;width:100%;max-width:100vw}
 a{color:inherit;text-decoration:none}
 img,video{display:block;max-width:100%}
 button{font:inherit;color:inherit;cursor:pointer}
@@ -209,8 +229,17 @@ footer .fine{display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px;
   #look .pic{height:44vh;order:-1}
   #look h3{font-size:56px}
   #look .desc{font-size:16px;margin-bottom:16px}
-  #collection .panel{width:82vw;grid-template-columns:1fr;gap:14px}
-  #collection .panel .ph{height:46vh}
+  header::before{content:"";position:absolute;inset:0 0 -24px;z-index:-1;-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);-webkit-mask-image:linear-gradient(#000 55%,transparent);mask-image:linear-gradient(#000 55%,transparent);pointer-events:none}
+  header .bar{height:72px}
+  header .logo{font-size:36px}
+  header .cta{min-height:40px;padding:0 16px;font-size:13px}
+  #collection .track{top:clamp(172px,25vh,220px);align-items:stretch;padding-bottom:5vh}
+  #collection .panel{width:82vw;grid-template-columns:1fr;grid-template-rows:minmax(0,1fr) auto;gap:12px}
+  #collection .panel .ph{height:auto;min-height:0;align-self:stretch;position:relative}
+  #collection .panel .ph img{position:absolute;inset:0}
+  #collection .panel .n{font-size:52px}
+  #collection .panel h3{font-size:38px;margin:0 0 6px}
+  #collection .panel p{font-size:14px;line-height:1.7;margin:0 0 12px}
   #book .grid{grid-template-columns:1fr;gap:40px}
   #atelier .step:nth-child(odd){justify-self:start}
 }
